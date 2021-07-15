@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock %}
+
+{% block body %}
+
+    
+    <div class="row">
+        <div class="column">
+            <h2>Write a number</h2>
+            <canvas id="canvas" width=500 height=500></canvas>
+            <button id="cls">Clear Canvas</button>
+        </div>
+        <div class="column">
+            <div id="prediction" class="primary">
+                <h1>Prediction:</h1>
+            </div>
+            <p>
+                Explanation
+            </p>
+            
+        </div>
+    </div>
+    
+    
+
+    <script src="{{ url_for('static', filename='js/index.js')}}"></script>
+{% endblock %}
